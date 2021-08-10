@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>New site</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header fix-block">
+  <div class="container grid header__container">
+    <div class="header__left">
+    <a class="logo header__logo">SneakMax</a>
+    </div>
+   
+    <div class="header__right">
+      <nav class="nav header__nav">
+
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Подбор товара</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Наша команда</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="burger btn-reset">
+        <span class="burger__line">
+
+        </span>
+      </button>
+      <div class="cart header__cart">
+        <button class="btn-reset  cart__btn cart__btn--inactive ">
+          <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+           <path d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461 6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164 0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617 6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421 4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434 7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797 15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798 4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"/>
+         </svg>
+         <div class="cart__count">1</div>
+       </button>
+
+       <div class="mini-cart">
+         <div class="mini-cart__top" data-simplebar>
+           <ul class="mini-cart__list list-reset">
+          
+           </ul>
+         </div>
+         <div class="mini-cart__bottom">
+           <div class="mini-cart__total">
+             <span class="mini-cart__txt">Итого</span>
+             <span class="mini-cart__summ">0 тен</span>
+           </div>
+           <button class="btn-reset btn btn--primary mini-cart__btn" data-graph-path="cart-modal">Перейти в корзину</button>
+         </div>
+       </div>
+      </div>
+     
+    </div>
+   
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero">
+<span class="hero__bg-text" aria-hidden="true">SneakMax</span>
+<div class="container hero__container">
+  
+    <h1 class="hero__title">
+        Кросcовки известных брендов 
+        c&nbsp;доставкой по&nbsp;России и&nbsp;СНГ
+    </h1>
+    <p class="hero__description">
+        Мы&nbsp;продаем кросcовки брендов Nike, Adidas, Puma, Reebook Converse и&nbsp;многие другие по&nbsp;низким ценам
+    </p>
+    <button class="btn-reset btn btn--primary js-move-to">Перейти к покупкам</button>
+</div>
+
+</section>
+      <section class="catalog">
+    <div class="container catalog__container">
+        <h2 class=" title catalog__title">Каталог</h2>
+          <div class="catalog__content grid">
+            <div class="catalog__left">
+              <div class="catalog-filters">
+                <h3 class="catalog__subtitle">Подбор по&nbsp;параметрам</h3>
+                <div class="catalog__prop">
+                    <strong class="catalog__caption">Цена, руб</strong>
+                    <div class="catalog-price catalog__prop-inner">
+                      <div class="catalog-price__wrapper">
+                        <input type="text" class="catalog-price__input" id="input-0">
+                        <input type="text" class="catalog-price__input" id="input-1">
+                      </div>
+                      
+                        <div class="catalog-price__element" id="range-slider"></div>
+                    </div>
+                </div>
+                <div class="catalog__prop">
+                    <strong class="catalog__caption">Пол</strong>
+                    <div class="catalog__prop-inner catalog__prop-checkboxes">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Мужской </span>
+                          </label>
+                          <label class="custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox__field">
+                            <span class="custom-checkbox__content">Женский</span>
+                          </label>
+                    </div>
+                </div>
+                <div class="catalog__prop">
+                    <strong class="catalog__caption">Размер</strong>
+                    <div class="catalog__prop-inner">
+                        <table class="sizes-table">
+                            <caption>Таблица размеров</caption>
+                            <tbody>
+                                <tr>
+                                    <td>35</td>
+                                    <td>36</td>
+                                    <td>37</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>39</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>41</td>
+                                    <td>42</td>
+                                    <td>43</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="catalog-filters__btns">
+                  <button class="btn btn-reset catalog__apply btn--secondary">Применить</button>
+                  <button class="btn-reset catalog__reset">Сбросить</button> 
+                </div>
+               
+              </div>
+         
+            </div>
+            <div class="catalog__grid">
+                <ul class="catalog-list list-reset grid">
+                    <li class="catalog-list__item">
+                     <article class="product">
+                       <div class="product__image">
+                           <img src="img/product-image.jpg" alt="Продукт 1">
+                           <div class="product__btns">
+                             <button class="btn-reset product__btn" aria-label="Показать информацию о товаре">
+                              <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9518 10.0664C16.9518 12.2489 15.1818 14.0176 12.9993 14.0176C10.8168 14.0176 9.0481 12.2489 9.0481 10.0664C9.0481 7.88264 10.8168 6.11389 12.9993 6.11389C15.1818 6.11389 16.9518 7.88264 16.9518 10.0664Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9975 19.1936C17.7575 19.1936 22.1113 15.7711 24.5625 10.0661C22.1113 4.3611 17.7575 0.938599 12.9975 0.938599H13.0025C8.2425 0.938599 3.88875 4.3611 1.4375 10.0661C3.88875 15.7711 8.2425 19.1936 13.0025 19.1936H12.9975Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                               
+                             </button>
+                             <button class="btn-reset product__btn" aria-label="Добавить товар в корзину">
+                             <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M27.9999 9.28571H23.2454L18.2502 0.450683C18.0025 0.0118078 17.465 -0.131483 17.0497 0.132405C16.6353 0.396293 16.5011 0.966644 16.7498 1.40646L21.2046 9.28571H6.79543L11.2502 1.40639C11.4989 0.966581 11.3647 0.39623 10.9503 0.132342C10.5342 -0.131546 9.99842 0.0117453 9.74975 0.450621L4.75464 9.28565H0V11.1428H1.89911L4.12206 23.7266C4.35446 25.0442 5.43966 26 6.70265 26H21.2974C22.5603 26 23.6455 25.0442 23.8771 23.7275L26.1008 11.1428H28L27.9999 9.28571ZM22.1569 23.3857C22.08 23.8246 21.7186 24.1429 21.2973 24.1429H6.70265C6.28138 24.1429 5.91996 23.8246 5.84219 23.3848L3.67904 11.1428H24.321L22.1569 23.3857Z" fill="white"/>
+                            </svg>
+                             </button>
+                           </div>
+                       </div>
+                       <h3 class="product__title">Кроссовки Nike Air Force 1 07 QS</h3>
+                       <span class="product__price">55 000 тен.</span>
+                     </article>
+                    </li>
+                </ul>
+                <button class="catalog__more btn btn-reset btn--primary">
+                     Показать еще
+                </button>
+            </div>
+        </div>
+       
+    </div>
+</section>
+      <section class="about">
+    <img class="about__figure" src="img/about-figure.svg" alt=""  aria-hidden="true">
+    <div class="container about__container">
+        <div class="about__text">
+            <h2 class="title about__title">
+                Пара слов о нас
+              </h2>
+              <p class="about__descr">
+                <q class="about__quote">
+                 Спорт держит нас в&nbsp;форме. Учит дисциплине. Объединяет нас. Через спорт мы&nbsp;можем менять жизни. 
+                 В&nbsp;том числе с&nbsp;помощью воодушевляющих историй спортсменов. Чтобы помочь тебе подняться и&nbsp;двигаться вперед.
+                </q>
+                <cite class="about__author">
+                     SneakMax
+                </cite>
+              </p>
+        </div>
+        <div class="about__image">
+            <img src="img/about.jpg" alt="" aria-hidden="true">
+        </div>
+    </div>
+</section>
+      <section class="quiz">
+    <div class="container">
+        
+        <div class="quiz__content">
+            <h2 class="visually-hidden">Подбор товара - квиз</h2>
+            <h3 class=" title quiz__title">Мы подберем идеальную пару для вас!</h3>
+            <p class="quiz__descr">Ответь на три вопроса и мы вышлем каталог  с самыми подходящими для вас моделями</p>
+            <form class="quiz-form" method="POST">
+               <div class="quiz-questions">
+
+               </div>
+               <div class="last-question">
+                <div class="last-question__form">
+                    <h3 class="last-question__title">Получить предложение</h3>
+                    <p class="last-question__descr">Получите подборку подходящих для вас моделей на почту</p>
+                    <input type="text" class="input last-question__input" placeholder="Ваше имя">
+                    <input type="email" class="input last-question__input" placeholder="E-mail">
+                    <button class="btn btn-reset btn--primary last-question__btn">Получить</button>
+                    <div class="last-question__decorate">
+                        <img src="img/Iphone.png" alt="" aria-hidden="true">
+                    </div>
+                </div>
+
+               </div>
+            </form>
+        </div>
+      
+    </div>
+</section>
+      <section class="team">
+    <img class="team__figure" src="img/team-figure.svg" alt=""  aria-hidden="true">
+    <div class="container">
+        <h2 class="title team__title">Наша команда</h2>
+        <ul class="team__list list-reset grid">
+            <li class="team__item">
+                <img src="img/team/teamer-1.jpg" alt="Максим Золотарев" class="team__img">
+                <strong class="team__subtitle">Максим Золотарев</strong>
+                <span class="team__post">Администратор</span>
+            </li>
+            <li class="team__item">
+                <img src="img/team/teamer-2.jpg" alt="Максим Золотарев" class="team__img">
+                <strong class="team__subtitle">Максим Золотарев</strong>
+                <span class="team__post">Администратор</span>
+            </li>
+            <li class="team__item">
+                <img src="img/team/teamer-3.jpg" alt="Максим Золотарев" class="team__img">
+                <strong class="team__subtitle">Максим Золотарев</strong>
+                <span class="team__post">Администратор</span>
+            </li>
+            <li class="team__item">
+                <img src="img/team/teamer-4.jpg" alt="Максим Золотарев" class="team__img">
+                <strong class="team__subtitle">Максим Золотарев</strong>
+                <span class="team__post">Администратор</span>
+            </li>
+            <li class="team__item">
+                <img src="img/team/teamer-5.jpg" alt="Максим Золотарев" class="team__img">
+                <strong class="team__subtitle">Максим Золотарев</strong>
+                <span class="team__post">Администратор</span>
+            </li>
+            <li class="team__item">
+                <img src="img/team/teamer-6.jpg" alt="Максим Золотарев" class="team__img">
+                <strong class="team__subtitle">Максим Золотарев</strong>
+                <span class="team__post">Администратор</span>
+            </li>
+        </ul>
+    </div>
+</section>
+      <section class="faq">
+    <div class="container faq__container">
+     <h2 class="title faq__title">Часто задаваемые вопросы</h2>
+     <ul class="faq__list list-reset">
+        <li class="faq-accordion">
+            <button class="faq-accordion__control btn-reset" aria-expanded="false">
+                <span class="faq-accordion__title">Вопрос 1</span>
+                <span class="faq-accordion__icon"></span>
+            </button>
+            <div class="faq-accordion__content" aria-hidden="true">
+            <p>А это ответ 1: в комплексе функцианируют 6 детских садов с площадками, воспитателями 
+                и всякими другими людьми.
+            </p>
+            </div>
+        </li>
+        <li class="faq-accordion">
+            <button class="faq-accordion__control btn-reset" aria-expanded="false">
+                <span class="faq-accordion__title">Вопрос 2</span>
+                <span class="faq-accordion__icon"></span>
+            </button>
+            <div class="faq-accordion__content" aria-hidden="true">
+            <p>А это ответ 2: в комплексе функцианируют 6 детских садов с площадками, воспитателями 
+                и всякими другими людьми.
+            </p>
+            </div>
+        </li>
+    </ul>
+    </div>
+</section>
+      <section class="contacts">
+    <div class="container contacts__container">
+      <div class="contacts__text">
+        <h2 class="title contacts__title">Контакты</h2> 
+        <div class="contacts__item">
+          <h3 class="contacts__subtitle">
+            Главный офис
+            <span class="tooltip">
+              <button class="tooltip__btn btn-reset" aria-describedby="office" aria-label="Описание адреса">
+                <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.78 7.85175H2.184C2.16533 7.35964 2.212 6.92324 2.324 6.54255C2.44533 6.16187 2.604 5.85082 2.8 5.60941C3.00533 5.35871 3.21067 5.13123 3.416 4.92696C3.62133 4.72268 3.81733 4.49984 4.004 4.25843C4.2 4.00773 4.33067 3.74775 4.396 3.47849C4.47067 2.93067 4.35867 2.50356 4.06 2.19715C3.76133 1.88146 3.36933 1.72361 2.884 1.72361C2.52 1.72361 2.18867 1.84432 1.89 2.08573C1.59133 2.32714 1.414 2.64747 1.358 3.04673H0C0.0373333 2.14608 0.312667 1.46363 0.826 0.999375C1.34867 0.535122 2.03 0.302996 2.87 0.302996C3.64467 0.284426 4.32133 0.47477 4.9 0.874027C5.488 1.27329 5.838 1.79789 5.95 2.44784C6.006 2.80068 6.01533 3.10708 5.978 3.36706C5.94067 3.70133 5.83333 4.01702 5.656 4.31414C5.488 4.60198 5.29667 4.85732 5.082 5.08016C4.87667 5.303 4.67133 5.53977 4.466 5.79047C4.26067 6.03188 4.09267 6.329 3.962 6.68183C3.83133 7.02538 3.77067 7.41535 3.78 7.85175ZM3.626 10.0523C3.458 10.2102 3.24333 10.2891 2.982 10.2891C2.72067 10.2891 2.49667 10.2102 2.31 10.0523C2.13267 9.89446 2.044 9.69019 2.044 9.43949C2.044 9.1888 2.13267 8.98453 2.31 8.82668C2.49667 8.66883 2.72067 8.58991 2.982 8.58991C3.24333 8.58991 3.458 8.66883 3.626 8.82668C3.80333 8.98453 3.892 9.1888 3.892 9.43949C3.892 9.69019 3.80333 9.89446 3.626 10.0523Z" fill="#444B58"/>
+                </svg>
+              </button>
+              <span class="tooltip__txt" role="tooltip" id="office">
+               <span class="visually-hidden">Тултип:</span>
+               Адресс и телефон для корреспонденции, Инвесторов, вопросы о доставке, 
+               качестве обслуживания и товара просьба задавать в отдел продаж
+            </span>
+            </span>
+          </h3>
+          <a class="contacts__phone" href="">8747 378 72 00</a>
+          <span class="contacts__address">г Алматы Зерделе 156</span>
+         
+        </div>
+        <div class="contacts__item">
+          <h3 class="contacts__subtitle">
+          Отдел продаж
+          </h3>
+          <a class="contacts__phone" href="">8747 378 72 00</a>
+          <span class="contacts__address">г Алматы Зерделе 156</span>
+        </div>
+        <ul class="social list-reset">
+          <li class="social__item"><a href="#" class="social__link social__link--vk" aria-label="Мы в контакте"></a></li>
+          <li class="social__item"><a href="#" class="social__link social__link--insta" aria-label="Мы в инсте"></a></li>
+        </ul>
+      </div>
+      <div class="contacts__map" id="map"></div>
+    </div>
+</section>
+      <section class="instagram">
+    <h2 class="visually-hidden">Форма и  инстаграмм лента</h2>
+    <div class="container instagram__container">
+      <div class="instagram__left">
+        <form action="#" class="callback-form">
+            <h3 class="title instagram__title">Есть вопросы?</h3>
+            <p class="instagram__descr">Заполните форму и&nbsp;наш менеджер свяжется с&nbsp;вами</p>
+            <label class="form-label">
+              <input type="text" class="input instagram__input" placeholder="Ваше имя" name="name" data-validate-field="name">
+            </label>
+            <label  class="form-label">
+            <input type="tel" class="input instagram__input" placeholder="Номер телефона" name="phone" data-validate-field="phone">
+            </label>
+            
+             <button class="btn btn--primary btn-reset instagram__btn">Отправить</button>
+        </form>
+      </div>
+      <div class="instagram__right">
+          <a href="#" class="instagram__link">
+              <img src="img/instagram.png" alt="logo: instagram">
+          </a>
+           <div class="instagram__content">
+            <article class="instagram__item">
+            <h3 class="instagram__subtitle visually-hidden">Фото инсты</h3>
+            <img src="img/insta-1.jpg" alt="Фото из инстаграмма">
+            </article>
+            <article class="instagram__item">
+            <h3 class="instagram__subtitle visually-hidden">Фото инсты</h3>
+              <img src="img/insta-3.jpg" alt="Фото из инстаграмма">
+              </article>
+              <article class="instagram__item">
+              <h3 class="instagram__subtitle visually-hidden">Фото инсты</h3>
+                <img src="img/insta-2.jpg" alt="Фото из инстаграмма">
+                </article>
+                <article class="instagram__item">
+                <h3 class="instagram__subtitle visually-hidden">Фото инсты</h3>
+                  <img src="img/insta-4.jpg" alt="Фото из инстаграмма">
+                  </article>
+                  <article class="instagram__item">
+                  <h3 class="instagram__subtitle visually-hidden">Фото инсты</h3>
+                    <img src="img/insta-5.jpg" alt="Фото из инстаграмма">
+                    </article>
+           </div>
+      </div>
+    </div>
+</section>
+      
+    </main>
+  
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__left">
+      <a class="logo footer__logo">SneakMax</a>
+    </div>
+    <div class="footer__right">
+      <nav class="nav footer__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Подбор товара</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Наша команда</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      
+     
+    </div>
+  </div>
+</footer>
+
+    <div class="modal">
+	<div class="modal__container prod-modal" role="dialog" aria-modal="true" data-graph-target="prod-modal">
+		<button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+		<div class="modal-content">
+			<div class="prod-modal__top">
+				<div class="modal-slider">
+					<div class="modal-slider__container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/product-image.jpg" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/product-image.jpg" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/product-image.jpg" alt="">
+							</div>
+						   </div>
+					</div>
+					<div class="modal-preview">
+                      <div class="modal-preview__item" data-index="0">
+						  <img src="img/product-image.jpg" alt="">
+					  </div>
+					  <div class="modal-preview__item" data-index="1">
+						<img src="img/product-image.jpg" alt="">
+					</div>
+					<div class="modal-preview__item" data-index="2">
+						<img src="img/product-image.jpg" alt="">
+					</div>
+					</div>
+				</div>
+				<div class="modal-info">
+					<div class="modal-info__top">
+						<span class="modal-info__vendor">Артикул:879876</span>
+						<span class="modal-info__quantity">В наличии: <span>13 шт</span></span>
+					</div>
+					<div class="modal-info__wrapper">
+						<h3 class="modal-info__title">
+							Женские  кроссовки Puma Force 1 Shadow
+						</h3>
+							<div class="modal-info__rate">
+							  <img src="img/star.svg" alt="рейтинг 5 из 5">
+							  <img src="img/star.svg" alt="">
+							  <img src="img/star.svg" alt="">
+							  <img src="img/star.svg" alt="">
+							  <img src="img/star.svg" alt="">
+							</div>
+							<div class="modal-info__sizes">
+							  <span class="modal-info__subtitle">Выберите размер</span>
+							  <ul class="list-reset modal-info__sizes-list modal-sizes">
+								<li class="modal-sizes__item">
+								  <button class="btn-reset modal-sizes__btn">36</button>
+								</li>
+								<li class="modal-sizes__item">
+								  <button class="btn-reset modal-sizes__btn">36</button>
+								</li>
+								<li class="modal-sizes__item">
+								  <button class=" btn-reset modal-sizes__btn">36</button>
+								</li>
+								<li class="modal-sizes__item">
+								  <button class="btn-reset modal-sizes__btn">36</button>
+								</li>
+								<li class="modal-sizes__item">
+								  <button class="btn-reset modal-sizes__btn">36</button>
+								</li>
+							  </ul>
+							</div>
+							<div class="modal-info__price">
+							  <span class="modal-info__current-price">19 789 тен</span>
+							  <span class="modal-info__old-price">20 578 тен</span>
+							</div>
+						
+					</div>
+
+					
+				
+					<button class="btn btn-reset btn--primary modal-info__order">Заказать</button>
+					<ul class="modal-info__note modal-note list-reset">
+                       <li class="modal-note__item">Бесплатая доставка до двери</li>
+					   <li class="modal-note__item">Оплата заказа при получении</li>
+					   <li class="modal-note__item">Обмен в течении двух недель</li>
+					</ul>
+				</div>
+			</div>
+			<div class="prod-modal__bottom prod-bottom">
+                 <div class="prod-bottom__column">
+					 <h3 class="prod-bottom__title">Описание</h3>
+					 <p class="prod-bottom__descr modal-prod-descr">
+						Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, 
+						создавая впечатление, что они хранились в шкафу долгие годы. 
+					 </p>
+				 </div>
+				 <div class="prod-bottom__column">
+					<h3 class="prod-bottom__title">Характеристики</h3>
+					<div class="prod-chars">
+						<p class="prod-bottom__descr prod-chars__item">Пол: Мужской</p>
+						<p class="prod-bottom__descr prod-chars__item">Цвета: Разноцветный</p>
+						<p class="prod-bottom__descr prod-chars__item">Состав: Кока, текстиль, резина</p>
+						<p class="prod-bottom__descr prod-chars__item">Страна: Вьетнам</p>
+					</div>
+					
+				 </div>
+			</div>
+			<div class="prod-modal__video">
+				<iframe src="https://www.youtube.com/embed/WyD87PXceJM" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			
+		</div>
+	</div>
+	<div class="modal__container cart-modal" role="dialog" aria-modal="true" data-graph-target="cart-modal">
+		<button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+		<div class="modal-content">
+			<div class="cart-modal__top">
+				<h2 class="cart-modal__title">Оформление заказа</h2>
+				<span class="cart-modal__order-number">Заказ 3456678</span>
+			</div>
+			<div class="cart-modal-order">
+			 <div class="cart-modal-order__top">
+			   <div class="span cart-modal-order__quantity">Товаров в заказе:<span> 3шт</span></div>
+			   <div class="span cart-modal-order__summ">Общая сумма заказа:<span> 25 789тен</span></div>
+			 </div>
+			 <div class="cart-modal-order__content">
+			   <button class="btn-reset cart-modal-order__show">
+			   Состав заказа
+<svg width="7" height="8" viewBox="0 0 7 8" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M6.92012 5.68997C6.81343 5.79687 6.64032 5.79704 6.53341 5.69037L3.69335 2.8562C3.58672 2.74959 3.41327 2.7496 3.30645 2.85641L0.466594 5.69037C0.359693 5.79705 0.18658 5.79687 0.0798849 5.68997C-0.0267831 5.58307 -0.0266053 5.40994 0.0802814 5.30328L2.91994 2.46951C3.07992 2.30956 3.28999 2.22961 3.50008 2.22961C3.71005 2.22961 3.92007 2.30953 4.07984 2.46932L6.91972 5.30328C7.02661 5.40994 7.02678 5.58307 6.92012 5.68997Z"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="7" height="7" fill="white" transform="matrix(1 0 0 -1 0 7.5)"/>
+</clipPath>
+</defs>
+</svg>
+			   </button>
+			   <ul class="cart-modal-order__list list-reset">
+			     <li class="cart-modal-order__item">
+			         <article class="cart-modal-order__product cart-modal-product">
+                 <div class="cart-modal-product__image">
+                   <img src="img/product-image.jpg" alt="">
+                 </div>
+                 <div class="cart-modal-product__content">
+                   <div class="cart-modal-product__text">
+                    <h3 class="cart-modal-product__title">Женские кроссовки Puma Force 1 Shadow</h3>
+                    <span class="cart-modal-product__price">8 678 тен</span>
+                   </div>
+                   <button class="btn-reset cart-modal-product__delete" aria-label="Удалить товар">
+                     Удалить
+                   </button>
+                   
+                 </div>
+               </article>
+			     </li>
+			   </ul>
+			 </div>
+			</div>
+			<form class="cart-modal__form">
+			 <input type="text" class="input cart-modal__input" name="name" placeholder="Ваше имя" data-validate-field="name">
+			 <input type="tel" class="input cart-modal__input" name="tel" placeholder="Номер телефона" data-validate-field="phone">
+			 <input type="email" class="input cart-modal__input" name="email" placeholder="E-mail" data-validate-field="email">
+			 <button class="btn btn-reset btn--primary cart-modal__btn">Оформить заказ</button>
+			</form>
+		</div>
+	</div>
+</div>
+    
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU">
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
