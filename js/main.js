@@ -318,7 +318,12 @@ var printQuantity = function printQuantity(num) {
 
 var loadCartData = function loadCartData() {
   var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  fetch("./data/data.json").then(function (response) {
+  fetch("./data/data.json", {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+      }).then(function (response) {
     return response.json();
   }).then(function (data) {
     var _iterator2 = _createForOfIteratorHelper(data),
