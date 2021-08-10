@@ -197,7 +197,7 @@ if (catalogList) {
 
   var loadModalData = function loadModalData() {
     var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-    fetch("../data/data.json", {
+    fetch("./data/data.json", {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
